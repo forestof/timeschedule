@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        ons.ready(function() {
+            console.log("Onsen UI is ready!");
+        });
+
+        window.fn = {};
+        window.fn.open = function() {
+          var menu = document.getElementById('menu');
+          menu.open();
+        };
+        window.fn.load = function(page) {
+          var content = document.getElementById('content');
+          var menu = document.getElementById('menu');
+          content.load(page)
+            .then(menu.close.bind(menu));
+        };
+
+    </script>
+</head>
+<body>
+  <ons-splitter>
+    <ons-splitter-side id="menu" side="left" width="220px" collapse swipeable>
+      <ons-page>
+        <ons-list>
+          <ons-list-item onclick="fn.load('home.html')" tappable>
+            TOP    
+          </ons-list-item>
+          <ons-list-item onclick="fn.load('settings.html')" tappable>
+            課題一覧
+          </ons-list-item>
+          <ons-list-item onclick="fn.load('about.html')" tappable>
+            時間割一覧
+          </ons-list-item>
+        </ons-list>
+      </ons-page>
+    </ons-splitter-side>
+    <ons-splitter-content id="content" page="home.html"></ons-splitter-content>
+  </ons-splitter>
+
+  <ons-template id="home.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          TOP
+        </div>
+      </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+        Swipe right to open the menu!
+        
+        <table border="1">
+        <tr>
+  　<th>&nbsp;</th>
+    <th width="50"><input style=border:none type="text" size="3" maxlength="10" name="getu" value="月" class="getu"></th>
+    <th width="50"><input style=border:none type="text" size="3" maxlength="10" name="ka" value="火" class="ka"></th>
+    <th width="50"><input style=border:none type="text" size="3" maxlength="10" name="sui" value="水" class="sui"></th>
+    <th width="50"><input style=border:none type="text" size="3" maxlength="10" name="moku" value="木" class="moku"></th>
+    <th width="50"><input style=border:none type="text" size="3" maxlength="10" name="kin" value="金" class="kin"></th>
+  </tr>
+  
+  <tr>
+    <td width="50" height="70"><input style=border:none type="text" size="3" maxlength="5" name="1" value="1" class="1"></td>
+    <td><ons-list>
+    <ons-list-item onclick="fn.load('getu1.html')" tappable>
+         </ons-list-item>
+     </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td width="50" height="70"><center><input style=border:none type="text" size="3" maxlength="5" name="2" value="2" class="2"></center></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td width="50" height="70"><center><input style=border:none type="text" size="3" maxlength="5" name="3" value="3" class="3"></center></td>
+    <td></td>  
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td width="50" height="70"><center><input style=border:none type="text" size="3" maxlength="5" name="4" value="4" class="4"></center></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td width="50" height="70"><center><input style=border:none type="text" size="3" maxlength="5" name="5" value="5" class="5"></center></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  </table>
+  
+  <form action="#">
+    <p>文字を入力して下さい：<input type="passward" value="" onMouseOut="incopy(this.form)" onMouseOver="incopy(this.form)" onkeydown="incopy(this.form)" onkeyup="incopy(this.form)" name="txt" size="40" /></p>
+    <div style="padding-top:30px;">
+    以下に文字が表示されます↓<br>
+    <input type="text" value="" readonly="readonly" name="copy" size="40" style="background-color:#ffffff; color:#0099FF; border:1px solid #ffffff; font-size:24px; font-weight:bold; text-align:center;" /></div>
+　</form>
+      </p>
+　
+　<img src="notekun.jpg">
+      
+    </ons-page>
+  </ons-template>
+  
+  <ons-template id="settings.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          課題一覧
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
+
+  <ons-template id="about.html">
+    <ons-page>
+      <ons-toolbar>
+        <div class="left">
+          <ons-toolbar-button onclick="fn.open()">
+            <ons-icon icon="md-menu"></ons-icon>
+          </ons-toolbar-button>
+        </div>
+        <div class="center">
+          時間割一覧
+        </div>
+      </ons-toolbar>
+    </ons-page>
+  </ons-template>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+</head>
+
+<body>
+<ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button onclick="fn.load('home.html')" tappable>TOP
+     　 </ons-back-button>
+     　 月1
+        </ons-toolbar>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        ons.ready(function() {
+          var button = document.getElementById('push-button');
+          var navigator = document.getElementById('navigator');
+
+          button.onclick = function() {
+            navigator.pushPage('page2.html');
+          };
+        });
+    </script>
+
+    <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button onclick="fn.load('home.html')" tappable>TOP
+     　 </ons-back-button>
+          <div class="center">月曜1限</div>
+        </ons-toolbar>
+      <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+        <div align="center">
+        <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333;  border-radius: 8px; width:250; text-align: left;">
+        　<form><font SIZE="2">授業名</font><INPUT TYPE="input" SIZE="10" MAXLENGTH="10" VALUE="INPUT BOX"></form>
+        　<FORM><font SIZE="2">教室</font><INPUT TYPE="input" SIZE="10" MAXLENGTH="10" VALUE="INPUT BOX"></FORM>
+        　<FORM><font SIZE="2">教授名</font><INPUT TYPE="input" SIZE="10" MAXLENGTH="10" VALUE="INPUT BOX"></FORM>
+        　<FORM><font SIZE="2">単位数</font><INPUT TYPE="input" SIZE="10" MAXLENGTH="10" VALUE="INPUT BOX"></FORM>
+　　　　</div>
+        </div>
+        <br>
+        <div align="center">
+        　<a class="button" href="mon1.A.html"><big>課題設定</big></a>
+        　<a class="button">カラー設定</a>
+        </div>
+        <BR>
+        <BR>
+        　
+        
+        
+      </p>
+    </ons-page>
+</ons-page>
+</body>
+</html>
+ 
