@@ -1,0 +1,71 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
+
+   
+</head>
+
+<body>
+       <ons-page>
+        <ons-toolbar>
+          <div class="left"><ons-back-button><a href="index.html">Back</a></ons-back-button></div>
+          <div class="center">課題設定</div>
+        </ons-toolbar>
+        <br>
+        <div align="center">
+            <p><big>月曜1限</big></p>
+
+            <p><small>
+                <img src="https://blogs.cornell.edu/ciams/files/2014/02/Graduation-2jkne5e.png" width="24" height="20">野場花子
+            </p></small>
+
+            <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 8px; width:250; text-align: left;">
+            <b>期日</b>
+                <br>　日付<input type="date" name="date" placeholder="2016-08-26">
+                <br>　時間<input type="time" name="time"　placeholder="23:10">
+            </div>
+            <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 8px; width:250; text-align: left;">
+            <nobr>
+            <b>アラーム</b>
+            　<br>　日付<input type="date" name="date" placeholder="2015-01-13">
+            　<br>　時間<input type="time" name="time"　placeholder="例 23:10">
+            </div></nobr>
+            
+            <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 
+                        8px; width: 250; text-align: left; white-space: nobr;">
+            <nobr><b>繰り返し</b>
+                    <div class="sample">
+                        <input type="radio" name="s2" id="on" value="1" checked="">
+                        <label for="on" class="switch-on">ON</label>
+                        <input type="radio" name="s2" id="off" value="0">
+                        <label for="off" class="switch-off">OFF</label>
+                    </div>
+            </nobr>        
+            </div>
+　        <input type="submit" value="実行"><form method="POST" herf="mon1.html">
+
+
+        </form>
+
+        </div>        
+        
+        
+        
+        
+        <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
+     </p>
+        
+      </ons-page>
+
+
+</body>
+</html>
