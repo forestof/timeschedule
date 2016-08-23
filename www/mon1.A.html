@@ -17,10 +17,28 @@
 <body>
        <ons-page>
         <ons-toolbar>
-          <div class="left"><ons-back-button><a href="index.html">Back</a></ons-back-button></div>
-          <div class="center">課題設定</div>
+            <div class="left">
+                <ons-back-button onclick="fn.load('getu1.html')" tappable>
+                  Back
+                </ons-back-button>
+            </div>
+            
+            <script>
+                  ons.ready(function() {
+                     var button = document.getElementById('push-button');
+                     var navigator = document.getElementById('navigator');
+ 
+                     button.onclick = function() {
+                     navigator.pushPage('mon1.A.html');
+                    };
+                    });
+             </script>
+            
+            
+            <div class="center">
+               課題設定   
+            </div>
         </ons-toolbar>
-        <br>
         <div align="center">
             <p><big>月曜1限</big></p>
 
@@ -43,10 +61,10 @@
             <div style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; border-radius: 
                         8px; width: 250; text-align: left; white-space: nobr;">
             <nobr><b>繰り返し</b>
-                    <div class="sample">
-                        <input type="radio" name="s2" id="on" value="1" checked="">
+                 　 <div class="sample">
+                      　<input type="radio" name="s2" id="on" value="1" checked="">
                         <label for="on" class="switch-on">ON</label>
-                        <input type="radio" name="s2" id="off" value="0">
+                      　<input type="radio" name="s2" id="off" value="0">
                         <label for="off" class="switch-off">OFF</label>
                     </div>
             </nobr>        
@@ -58,11 +76,6 @@
 
         </div>        
         
-        
-        
-        
-        <p style="text-align: center; opacity: 0.6; padding-top: 20px;">
-     </p>
         
       </ons-page>
 
